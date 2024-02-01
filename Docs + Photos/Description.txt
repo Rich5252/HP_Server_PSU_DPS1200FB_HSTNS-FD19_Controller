@@ -1,0 +1,15 @@
+//--------------------------------------------------------------------------
+//Derived from: https://github.com/raplin/DPS-1200FB
+// Lots of other useful info here: https://github.com/slundell/dps_charger
+//--------------------------------------------------------------------------
+
+//===============================================================================
+//Features PSU power up/down depending on USB power (ie controlled from PC).
+//Monitors current and trips the PSU if it exceeds a selectable current.
+//  Current trip level is selectable via the rotary control.
+//  Reset is via a long push on rotary control switch.
+//Also has a 4 digit display with selectable status register displays selected
+//  via the push switch on the rotary control.
+//Low update rate USB serial output of all PSU registers (9600 baud).
+//Developed for HP DPS-1200FB (HSTNS-PD19). However should work with many others.
+//73 - G4AHN
