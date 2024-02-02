@@ -160,7 +160,6 @@ void loop()
   //If changed then update trip current and display this for 500ms 
   if (pos != newPos) {
     ItripAmps = ItripAmps + newPos - pos;     //change trip current (half amp resolution)
-    EEPROM.update(ItripEEaddr, ItripAmps);
     pos = newPos;
     StartTripDisp = millis();
   }
@@ -172,6 +171,7 @@ void loop()
       str = GetStr(ItripAmps / 2.0, 1) + "t";      
     }
     else {
+      EEPROM.update(ItripEEaddr, ItripAmps);          //doing this here reduces write cycles on EEPROM
       StartTripDisp = 0;      //end of trip displ
     }
   }
